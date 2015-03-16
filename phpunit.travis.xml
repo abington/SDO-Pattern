@@ -34,8 +34,8 @@ testSuiteLoaderFile="/path/to/StandardTestSuiteLoader.php"
          verbose="false">
 
     <testsuites>
-        <testsuite name="chippyash/SDO">
-            <directory phpVersion="5.4.0" phpVersionOperator=">=">./test/src/</directory>
+        <testsuite name="chippyash/SDO-Pattern">
+            <directory phpVersion="5.4.0" phpVersionOperator=">=">./test/</directory>
         </testsuite>
     </testsuites>
     <!--
