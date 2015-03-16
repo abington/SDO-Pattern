@@ -33,7 +33,7 @@ class JsonTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @expectedException \chippyash\SDO\Exceptions\SDOException
-     * @expectedExceptionMessage Failed to decode json.
+     * @expectedExceptionMessage Failed to decode json
      */
     public function testMapInThrowsExceptionWithValidJson()
     {

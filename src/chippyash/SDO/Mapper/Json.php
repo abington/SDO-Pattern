@@ -30,7 +30,7 @@ class Json implements MapperInterface
     {
         $ret = json_decode($data);
         if (is_null($ret)) {
-            throw new SDOException('Failed to decode json.');
+            throw new SDOException('Failed to decode json');
         }
 
         return $ret;

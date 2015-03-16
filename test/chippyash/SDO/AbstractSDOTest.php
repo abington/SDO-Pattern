@@ -180,6 +180,19 @@ class AbstractSDOTest extends \PHPUnit_Framework_TestCase {
         $this->assertEquals(new \StdClass(), $this->sut->getData());
     }
 
+    public function testSendReturnsFluentInterfaceOnSuccess()
+    {
+        $this->transport
+            ->expects($this->once())
+            ->method('write')
+            ->will($this->returnSelf());
+        $this->mapper
+            ->expects($this->once())
+            ->method('mapOut')
+            ->will($this->returnValue('{"bar":1}'));
+        $this->assertInstanceOf('chippyash\SDO\AbstractSDO', $this->sut->send());
+    }
+
     /**
      * @expectedException chippyash\SDO\Exceptions\SDOException
      * @expectedExceptionMessage No mapper set
