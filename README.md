@@ -1,4 +1,4 @@
-# chippyash/SDO
+# chippyash/SDO-Pattern
 
 ## Quality Assurance
 
@@ -25,10 +25,11 @@ The library is released under the [GNU GPL V3 or later license](http://www.gnu.o
 ## Why?
 
 This pattern has emerged through many years of repeating the same thing:
+
 - I need data in a format that I can use it
 - The data is located at some endpoint over which I have no control
 
-There are some key elements to an SDO if you ignore the complexity of session storage and potential caching of SDOs
+There are some key elements to a SDO if you ignore the complexity of session storage and potential caching of SDOs
 in flight:
 
 - You need to have a consistent internal representation of the remote data
@@ -63,7 +64,7 @@ An SDO requires three things in order to operate effectively:
 
 The following is based on a simple scenario:
 
-- data is contained in file that is provided by some other system over which we have no control
+- data is contained in a file that is provided by some other system over which we have no control
     - we need a file transport
 - external data format is json, the internal format is a StdClass
     - we need a mapper that maps incoming json to StdClass and back out as Json
@@ -112,7 +113,7 @@ The SDOInterface dictates
 - public function fetch();
     - fetch SDO data from remote source, validate it and map it into internalised format
 - public function send();
-    - convert internal format data to extenal format and send it to remote target
+    - convert internal format data to external format and send it to remote target
 - public function getData();
     - get internal format data
 - public function setData($incomingData);
@@ -152,6 +153,20 @@ thus:
     $sdo()->bar += 1;
     $sdo->send();
 </pre>
+
+This clearly is closer to true SDO usage.  
+
+It is not beyond the wit of a PHP dev to create a descendent SDO that is 
+totally self managing, caching locally when required, fetching and sending only when required.  In my day job, we have 
+all of this and service classes that manage whole collections of SDOs.  Numb nuts upstream change the incoming payload;
+ we just change the validator (if necessary, see below). Change the endpoint; we change the transport. Want to change the way you 
+ represent the data internally; change the mapper.  
+ 
+On Mappers, consider using the [Builder Pattern](https://github.com/chippyash/Builder-Pattern) if you need to create 
+complex data structures.
+
+On Validators, code defensively. Validate only what you expect to use and ignore the rest.  That way, when they change the
+payload without telling you, you don't care (assuming they leave what you want in it!)
 
 You can find the source in example/example.php.
 
