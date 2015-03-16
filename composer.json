@@ -1,0 +1,26 @@
+{
+    "name": "chippyash/sdo-pattern",
+    "description": "Service Data Object Pattern. Consistently performing service endpoints",
+    "keywords" : ["sdo", "dto", "pattern", "service", "data"],
+    "license": "GPL-3.0+",
+    "homepage" : "http://the-matrix.github.io/",
+    "authors": [
+        {
+            "name": "Ashley Kitson",
+            "email": "ashley@zf4.biz"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+          "chippyash\\SDO\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=5.3"
+    },
+    "require-dev": {
+      "phpunit/phpunit": "~4.3.0",
+      "satooshi/php-coveralls": "dev-master",
+      "mikey179/vfsStream": "~1.4.0"
+    }
+}
