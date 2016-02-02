@@ -91,7 +91,7 @@ The MapperInterface dictates two methods:
 - public function mapIn($data);
     - map some data fetched by TransportInterface::read() into some internalised format
     
-- public function write($internal);
+- public function mapOut($internal);
     - map internal formatted data to some external format to be used by TransportInterface::write()
     
 The supplied chippyash\SDO\Mapper\Json gives what we need.
