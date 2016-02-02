@@ -2,7 +2,7 @@
 
 ## Quality Assurance
 
-Certified for PHP 5.3+
+Certified for PHP 5.5+
 
 [![Build Status](https://travis-ci.org/chippyash/SDO-Pattern.svg?branch=master)](https://travis-ci.org/chippyash/SDO-Pattern)
 [![Coverage Status](https://coveralls.io/repos/chippyash/SDO-Pattern/badge.png)](https://coveralls.io/r/chippyash/SDO-Pattern)
@@ -162,7 +162,7 @@ all of this and service classes that manage whole collections of SDOs.  Numb nut
  we just change the validator (if necessary, see below). Change the endpoint; we change the transport. Want to change the way you 
  represent the data internally; change the mapper.  
  
-On Mappers, consider using the [Builder Pattern](https://github.com/chippyash/Builder-Pattern) if you need to create 
+On Mappers, consider using the [Assembly Builder](https://github.com/chippyash/Assembly-Builder) or [Builder Pattern](https://github.com/chippyash/Builder-Pattern) if you need to create 
 complex data structures.
 
 On Validators, code defensively. Validate only what you expect to use and ignore the rest.  That way, when they change the
