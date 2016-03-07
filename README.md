@@ -211,7 +211,7 @@ Install [Composer](https://getcomposer.org/)
 add
 
 <pre>
-    "chippyash/sdo-pattern": ">=1.0.0"
+    "chippyash/sdo-pattern": ">=2.0.0"
 </pre>
 
 to your composer.json "requires" section
