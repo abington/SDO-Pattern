@@ -8,6 +8,12 @@ Certified for PHP 5.5 - 5.6
 [![Test Coverage](https://codeclimate.com/github/chippyash/SDO-Pattern/badges/coverage.svg)](https://codeclimate.com/github/chippyash/SDO-Pattern/coverage)
 [![Code Climate](https://codeclimate.com/github/chippyash/SDO-Pattern/badges/gpa.svg)](https://codeclimate.com/github/chippyash/SDO-Pattern)
 
+The above badges represent the current development branch.  As a rule, I don't push
+ to GitHub unless tests, coverage and usability are acceptable.  This may not be
+ true for short periods of time; on holiday, need code for some other downstream
+ project etc.  If you need stable code, use a tagged version. Read 'Further Documentation'
+ and 'Installation'.
+ 
 See the [Test Contract](https://github.com/chippyash/SDO-Pattern/blob/master/docs/Test-Contract.md)
 
 ## What?
@@ -226,8 +232,18 @@ To run the tests:
     cd chippyash-sdo
     vendor/bin/phpunit -c test/phpunit.xml test/
 </pre>
+## License
+
+This software library is released under the [GNU GPL V3 or later license](http://www.gnu.org/copyleft/gpl.html)
+
+This software library is Copyright (c) 2015-2016, Ashley Kitson, UK
+
+A commercial license is available for this software library, please contact the author. 
+It is normally free to deserving causes, but gets you around the limitation of the GPL
+license, which does not allow unrestricted inclusion of this code in commercial works.
 
 ## History
 
 V1.0.0 Original release
 
+V2.0.0 BC Break: namespace change from chippyash\SDO to Chippyash\SDO
