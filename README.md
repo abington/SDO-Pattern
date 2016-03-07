@@ -2,10 +2,13 @@
 
 ## Quality Assurance
 
-Certified for PHP 5.5+
+Certified for PHP 5.5 - 5.6
 
 [![Build Status](https://travis-ci.org/chippyash/SDO-Pattern.svg?branch=master)](https://travis-ci.org/chippyash/SDO-Pattern)
-[![Coverage Status](https://coveralls.io/repos/chippyash/SDO-Pattern/badge.png)](https://coveralls.io/r/chippyash/SDO-Pattern)
+[![Test Coverage](https://codeclimate.com/github/chippyash/SDO-Pattern/badges/coverage.svg)](https://codeclimate.com/github/chippyash/SDO-Pattern/coverage)
+[![Code Climate](https://codeclimate.com/github/chippyash/SDO-Pattern/badges/gpa.svg)](https://codeclimate.com/github/chippyash/SDO-Pattern)
+
+See the [Test Contract](https://github.com/chippyash/SDO-Pattern/blob/master/docs/Test-Contract.md)
 
 ## What?
 
@@ -166,7 +169,8 @@ On Mappers, consider using the [Assembly Builder](https://github.com/chippyash/A
 complex data structures.
 
 On Validators, code defensively. Validate only what you expect to use and ignore the rest.  That way, when they change the
-payload without telling you, you don't care (assuming they leave what you want in it!)
+payload without telling you, you don't care (assuming they leave what you want in it!).
+Consider using [Functional Validation](https://github.com/chippyash/Validation)
 
 You can find the source in example/example.php.
 

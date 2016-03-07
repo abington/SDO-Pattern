@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,10 +8,10 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\SDO\Mapper;
+namespace Chippyash\SDO\Mapper;
 
-use chippyash\SDO\Exceptions\SDOException;
-use chippyash\SDO\MapperInterface;
+use Chippyash\SDO\Exceptions\SDOException;
+use Chippyash\SDO\MapperInterface;
 
 /**
  * Json Mapper. Convert from json to a StdClass and back again

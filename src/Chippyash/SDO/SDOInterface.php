@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,11 +8,11 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\SDO;
+namespace Chippyash\SDO;
 
-use chippyash\SDO\MapperInterface;
-use chippyash\SDO\TransportInterface;
-use chippyash\SDO\ValidatorInterface;
+use Chippyash\SDO\MapperInterface;
+use Chippyash\SDO\TransportInterface;
+use Chippyash\SDO\ValidatorInterface;
 
 interface SDOInterface {
 

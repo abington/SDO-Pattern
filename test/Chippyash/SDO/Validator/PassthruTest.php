@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,9 +8,9 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\Test\SDO\Validator;
+namespace Chippyash\Test\SDO\Validator;
 
-use chippyash\SDO\Validator\Passthru as PassthruValidator;
+use Chippyash\SDO\Validator\Passthru as PassthruValidator;
 
 class PassthruTest extends \PHPUnit_Framework_TestCase {
 

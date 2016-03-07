@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,25 +8,18 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\SDO\Mapper;
+namespace Chippyash\SDO;
 
-use chippyash\SDO\MapperInterface;
 
-/**
- * Pass Through mapper: returns whatever it is given
- */
-class Passthru implements MapperInterface
-{
+interface MapperInterface {
+
     /**
      * Map an external data representation into an internal one
      *
      * @param mixed $data
      * @return mixed Internal structure of date for the SDO
      */
-    public function mapIn($data)
-    {
-        return $data;
-    }
+    public function mapIn($data);
 
     /**
      * Map the internal data representation into an external one
@@ -34,8 +27,5 @@ class Passthru implements MapperInterface
      * @param mixed $internal Internal representation of data
      * @return mixed External representation of date
      */
-    public function mapOut($internal)
-    {
-        return $internal;
-    }
+    public function mapOut($internal);
 }

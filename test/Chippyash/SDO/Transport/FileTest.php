@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,9 +8,9 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\Test\SDO\Transport;
+namespace Chippyash\Test\SDO\Transport;
 
-use chippyash\SDO\Transport\File as FileTransport;
+use Chippyash\SDO\Transport\File as FileTransport;
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamContent;
 
@@ -45,7 +45,7 @@ class FileTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException \chippyash\SDO\Exceptions\SDOException
+     * @expectedException \Chippyash\SDO\Exceptions\SDOException
      * @expectedExceptionMessage File does not exist
      */
     public function testReadWillThrowExceptionIfFileDoesNotExist()

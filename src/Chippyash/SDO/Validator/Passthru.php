@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,13 +8,15 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\SDO;
+namespace Chippyash\SDO\Validator;
+
+use Chippyash\SDO\ValidatorInterface;
 
 /**
- * Validate incoming data priot to mapping
+ * Pass Through validator: Returns true
  */
-interface ValidatorInterface {
-
+class Passthru implements ValidatorInterface
+{
     /**
      * Validate incoming data prior to mapping
      *
@@ -22,5 +24,8 @@ interface ValidatorInterface {
      *
      * @return boolean
      */
-    public function isValid($external);
+    public function isValid($external)
+    {
+        return true;
+    }
 }

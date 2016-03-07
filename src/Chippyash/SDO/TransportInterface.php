@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,7 +8,7 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\SDO;
+namespace Chippyash\SDO;
 
 /**
  * Fetch and send data on an SDO's behalf

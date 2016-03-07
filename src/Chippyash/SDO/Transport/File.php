@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,10 +8,10 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\SDO\Transport;
+namespace Chippyash\SDO\Transport;
 
-use chippyash\SDO\Exceptions\SDOException;
-use chippyash\SDO\TransportInterface;
+use Chippyash\SDO\Exceptions\SDOException;
+use Chippyash\SDO\TransportInterface;
 
 /**
  * Read and write data object to/from file

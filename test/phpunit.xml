@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-PHPUnit configuration file to run chippyash\SDO-Pattern tests
+PHPUnit configuration file to run Chippyash\SDO-Pattern tests
 -->
 
 <!--
@@ -41,10 +41,10 @@ testSuiteLoaderFile="/path/to/StandardTestSuiteLoader.php"
         <blacklist>
             <directory>../vendor</directory>
             <!-- don't cover interfaces -->
-            <file>../src/chippyash/SDO/SDOInterface</file>
-            <file>../src/chippyash/SDO/MapperInterface</file>
-            <file>../src/chippyash/SDO/TransportInterface</file>
-            <file>../src/chippyash/SDO/ValidatorInterface</file>
+            <file>../src/Chippyash/SDO/SDOInterface</file>
+            <file>../src/Chippyash/SDO/MapperInterface</file>
+            <file>../src/Chippyash/SDO/TransportInterface</file>
+            <file>../src/Chippyash/SDO/ValidatorInterface</file>
         </blacklist>
     </filter>
 

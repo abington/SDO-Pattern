@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,14 +8,14 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\Test\SDO\Exceptions;
+namespace Chippyash\Test\SDO\Exceptions;
 
-use chippyash\SDO\Exceptions\SDOException;
+use Chippyash\SDO\Exceptions\SDOException;
 
 class SDOExceptionTest extends \PHPUnit_Framework_TestCase {
 
     public function testConstructingAnSDOExceptionCreatesCorrectClass()
     {
-        $this->assertInstanceOf('chippyash\SDO\Exceptions\SDOException', new SDOException());
+        $this->assertInstanceOf('Chippyash\SDO\Exceptions\SDOException', new SDOException());
     }
 }

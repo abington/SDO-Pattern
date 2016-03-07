@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,9 +8,9 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\Test\SDO\Mapper;
+namespace Chippyash\Test\SDO\Mapper;
 
-use chippyash\SDO\Mapper\Json as JsonMapper;
+use Chippyash\SDO\Mapper\Json as JsonMapper;
 
 class JsonTest extends \PHPUnit_Framework_TestCase {
 
@@ -32,7 +32,7 @@ class JsonTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException \chippyash\SDO\Exceptions\SDOException
+     * @expectedException \Chippyash\SDO\Exceptions\SDOException
      * @expectedExceptionMessage Failed to decode json
      */
     public function testMapInThrowsExceptionWithValidJson()

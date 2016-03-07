@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,9 +8,9 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\Test\SDO\Mapper;
+namespace Chippyash\Test\SDO\Mapper;
 
-use chippyash\SDO\Mapper\Passthru as PassthruMapper;
+use Chippyash\SDO\Mapper\Passthru as PassthruMapper;
 
 class PassthruTest extends \PHPUnit_Framework_TestCase {
 

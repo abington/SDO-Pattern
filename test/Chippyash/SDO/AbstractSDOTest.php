@@ -1,6 +1,6 @@
 <?php
 /**
- * chippyash/sdo-pattern
+ * Chippyash/sdo-pattern
  * Service Data Objects
  *
  * @author Ashley Kitson
@@ -8,9 +8,9 @@
  * @license GPL V3 or later
  */
 
-namespace chippyash\Test\SDO;
+namespace Chippyash\Test\SDO;
 
-use chippyash\SDO\AbstractSDO;
+use Chippyash\SDO\AbstractSDO;
 
 class AbstractSDOTest extends \PHPUnit_Framework_TestCase {
 
@@ -33,33 +33,33 @@ class AbstractSDOTest extends \PHPUnit_Framework_TestCase {
 
     protected function setUp()
     {
-        $this->transport = $this->getMock('chippyash\SDO\TransportInterface');
-        $this->mapper = $this->getMock('chippyash\SDO\MapperInterface');
-        $this->validator = $this->getMock('chippyash\SDO\ValidatorInterface');
-        $this->sut = $this->getMockForAbstractClass('chippyash\SDO\AbstractSDO',
+        $this->transport = $this->getMock('Chippyash\SDO\TransportInterface');
+        $this->mapper = $this->getMock('Chippyash\SDO\MapperInterface');
+        $this->validator = $this->getMock('Chippyash\SDO\ValidatorInterface');
+        $this->sut = $this->getMockForAbstractClass('Chippyash\SDO\AbstractSDO',
             array($this->transport, $this->mapper, $this->validator)
         );
     }
 
     public function testConstructionWithParametersReturnsSDO()
     {
-        $this->assertInstanceOf('chippyash\SDO\AbstractSDO', $this->sut);
+        $this->assertInstanceOf('Chippyash\SDO\AbstractSDO', $this->sut);
     }
 
     public function testConstructionParametersAreOptional()
     {
-        $this->assertInstanceOf('chippyash\SDO\AbstractSDO',
-            $this->getMockForAbstractClass('chippyash\SDO\AbstractSDO',
+        $this->assertInstanceOf('Chippyash\SDO\AbstractSDO',
+            $this->getMockForAbstractClass('Chippyash\SDO\AbstractSDO',
                 array(null, $this->mapper, $this->validator)
             )
         );
-        $this->assertInstanceOf('chippyash\SDO\AbstractSDO',
-            $this->getMockForAbstractClass('chippyash\SDO\AbstractSDO',
+        $this->assertInstanceOf('Chippyash\SDO\AbstractSDO',
+            $this->getMockForAbstractClass('Chippyash\SDO\AbstractSDO',
                 array($this->transport, null, $this->validator)
             )
         );
-        $this->assertInstanceOf('chippyash\SDO\AbstractSDO',
-            $this->getMockForAbstractClass('chippyash\SDO\AbstractSDO',
+        $this->assertInstanceOf('Chippyash\SDO\AbstractSDO',
+            $this->getMockForAbstractClass('Chippyash\SDO\AbstractSDO',
                 array($this->transport, $this->mapper, null)
             )
         );
@@ -67,22 +67,22 @@ class AbstractSDOTest extends \PHPUnit_Framework_TestCase {
 
     public function testYouCanSetATransportAfterConstruction()
     {
-        $this->assertInstanceOf('chippyash\SDO\AbstractSDO',
-            $this->sut->setTransport($this->getMock('chippyash\SDO\TransportInterface'))
+        $this->assertInstanceOf('Chippyash\SDO\AbstractSDO',
+            $this->sut->setTransport($this->getMock('Chippyash\SDO\TransportInterface'))
         );
     }
 
     public function testYouCanSetAMapperAfterConstruction()
     {
-        $this->assertInstanceOf('chippyash\SDO\AbstractSDO',
-            $this->sut->setMapper($this->getMock('chippyash\SDO\MapperInterface'))
+        $this->assertInstanceOf('Chippyash\SDO\AbstractSDO',
+            $this->sut->setMapper($this->getMock('Chippyash\SDO\MapperInterface'))
         );
     }
 
     public function testYouCanSetAValidatorAfterConstruction()
     {
-        $this->assertInstanceOf('chippyash\SDO\AbstractSDO',
-            $this->sut->setValidator($this->getMock('chippyash\SDO\ValidatorInterface'))
+        $this->assertInstanceOf('Chippyash\SDO\AbstractSDO',
+            $this->sut->setValidator($this->getMock('Chippyash\SDO\ValidatorInterface'))
         );
     }
 
@@ -132,19 +132,19 @@ class AbstractSDOTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException chippyash\SDO\Exceptions\SDOException
+     * @expectedException Chippyash\SDO\Exceptions\SDOException
      * @expectedExceptionMessage No validator set
      */
     public function testFetchWillThrowExceptionIfValidatorNotSet()
     {
-        $sut = $this->getMockForAbstractClass('chippyash\SDO\AbstractSDO',
+        $sut = $this->getMockForAbstractClass('Chippyash\SDO\AbstractSDO',
             array($this->transport, $this->mapper, null)
         );
         $sut->fetch();
     }
 
     /**
-     * @expectedException chippyash\SDO\Exceptions\SDOException
+     * @expectedException Chippyash\SDO\Exceptions\SDOException
      * @expectedExceptionMessage No mapper set
      */
     public function testFetchWillThrowExceptionIfMapperNotSet()
@@ -154,19 +154,19 @@ class AbstractSDOTest extends \PHPUnit_Framework_TestCase {
             ->method('isValid')
             ->will($this->returnValue(true));
 
-        $sut = $this->getMockForAbstractClass('chippyash\SDO\AbstractSDO',
+        $sut = $this->getMockForAbstractClass('Chippyash\SDO\AbstractSDO',
             array($this->transport, null, $this->validator)
         );
         $sut->fetch();
     }
 
     /**
-     * @expectedException chippyash\SDO\Exceptions\SDOException
+     * @expectedException Chippyash\SDO\Exceptions\SDOException
      * @expectedExceptionMessage No transport set
      */
     public function testFetchWillThrowExceptionIfTransportNotSet()
     {
-        $sut = $this->getMockForAbstractClass('chippyash\SDO\AbstractSDO',
+        $sut = $this->getMockForAbstractClass('Chippyash\SDO\AbstractSDO',
             array(null, $this->mapper, $this->validator)
         );
         $sut->fetch();
@@ -174,7 +174,7 @@ class AbstractSDOTest extends \PHPUnit_Framework_TestCase {
 
     public function testYouCanSetTheInternalDataManually()
     {
-        $this->assertInstanceOf('chippyash\SDO\AbstractSDO',
+        $this->assertInstanceOf('Chippyash\SDO\AbstractSDO',
             $this->sut->setData(new \StdClass())
         );
         $this->assertEquals(new \StdClass(), $this->sut->getData());
@@ -190,28 +190,28 @@ class AbstractSDOTest extends \PHPUnit_Framework_TestCase {
             ->expects($this->once())
             ->method('mapOut')
             ->will($this->returnValue('{"bar":1}'));
-        $this->assertInstanceOf('chippyash\SDO\AbstractSDO', $this->sut->send());
+        $this->assertInstanceOf('Chippyash\SDO\AbstractSDO', $this->sut->send());
     }
 
     /**
-     * @expectedException chippyash\SDO\Exceptions\SDOException
+     * @expectedException Chippyash\SDO\Exceptions\SDOException
      * @expectedExceptionMessage No mapper set
      */
     public function testSendWillThrowExceptionIfMapperNotSet()
     {
-        $sut = $this->getMockForAbstractClass('chippyash\SDO\AbstractSDO',
+        $sut = $this->getMockForAbstractClass('Chippyash\SDO\AbstractSDO',
             array($this->transport)
         );
         $sut->send();
     }
 
     /**
-     * @expectedException chippyash\SDO\Exceptions\SDOException
+     * @expectedException Chippyash\SDO\Exceptions\SDOException
      * @expectedExceptionMessage No transport set
      */
     public function testSendWillThrowExceptionIfTransportNotSet()
     {
-        $sut = $this->getMockForAbstractClass('chippyash\SDO\AbstractSDO',
+        $sut = $this->getMockForAbstractClass('Chippyash\SDO\AbstractSDO',
             array(null, $this->mapper)
         );
         $sut->send();
