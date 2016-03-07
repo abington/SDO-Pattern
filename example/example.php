@@ -1,7 +1,7 @@
 #! /usr/bin/env php
 <?php
 /**
- * chippyash/sdo
+ * catChippyash/sdo
  * Service Data Objects
  * Example
  *
@@ -9,14 +9,14 @@
  * @copyright Ashley Kitson, UK, 2015
  * @license GPL V3 or later
  */
-namespace chippyash\example;
+namespace Chippyash\example;
 
 require_once('../vendor/autoload.php');
 
-use chippyash\SDO\Transport\File as FileTransport;
-use chippyash\SDO\Validator\Passthru as PassthruValidator;
-use chippyash\SDO\Mapper\Json as JsonMapper;
-use chippyash\SDO\AbstractSDO;
+use Chippyash\SDO\Transport\File as FileTransport;
+use Chippyash\SDO\Validator\Passthru as PassthruValidator;
+use Chippyash\SDO\Mapper\Json as JsonMapper;
+use Chippyash\SDO\AbstractSDO;
 
 class FooSDO extends AbstractSDO {}
 
