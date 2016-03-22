@@ -58,7 +58,7 @@ The current library provides the basic tools for creating SDOs, primarily the re
  
 If you want more, either suggest it, or better still, fork it and provide a pull request.
 
-See [The Matrix Packages](http://the-matrix.github.io/packages/) for other packages from chippyash
+Check out [ZF4 Packages](http://zf4.biz/packages?utm_source=github&utm_medium=web&utm_campaign=blinks&utm_content=sdopattern) for more packages
  
 ## How
 
@@ -249,3 +249,5 @@ V1.0.0 Original release
 V2.0.0 BC Break: namespace change from chippyash\SDO to Chippyash\SDO
 
 V2.0.1 update examples
+
+V2.0.2 Add link to packages
