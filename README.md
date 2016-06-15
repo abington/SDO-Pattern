@@ -2,8 +2,9 @@
 
 ## Quality Assurance
 
-Certified for PHP 5.5 - 5.6
-
+![PHP 5.5](https://img.shields.io/badge/PHP-5.5-blue.svg)
+![PHP 5.6](https://img.shields.io/badge/PHP-5.6-blue.svg)
+![PHP 7](https://img.shields.io/badge/PHP-7-blue.svg)
 [![Build Status](https://travis-ci.org/chippyash/SDO-Pattern.svg?branch=master)](https://travis-ci.org/chippyash/SDO-Pattern)
 [![Test Coverage](https://codeclimate.com/github/chippyash/SDO-Pattern/badges/coverage.svg)](https://codeclimate.com/github/chippyash/SDO-Pattern/coverage)
 [![Code Climate](https://codeclimate.com/github/chippyash/SDO-Pattern/badges/gpa.svg)](https://codeclimate.com/github/chippyash/SDO-Pattern)
@@ -251,3 +252,5 @@ V2.0.0 BC Break: namespace change from chippyash\SDO to Chippyash\SDO
 V2.0.1 update examples
 
 V2.0.2 Add link to packages
+
+V2.0.3 verify PHP7 compatibility
