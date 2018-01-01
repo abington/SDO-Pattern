@@ -254,3 +254,5 @@ V2.0.1 update examples
 V2.0.2 Add link to packages
 
 V2.0.3 verify PHP7 compatibility
+
+V2.0.4 update build scripting
