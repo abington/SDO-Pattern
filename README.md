@@ -15,6 +15,10 @@ The above badges represent the current development branch.  As a rule, I don't p
  project etc.  If you need stable code, use a tagged version. Read 'Further Documentation'
  and 'Installation'.
  
+Please note that the Travis build servers sometimes have a wobbly and thus the build
+status may be incorrect.  If you need to be certain, click on the build status badge
+and checkout out the build for yourself.
+ 
 See the [Test Contract](https://github.com/chippyash/SDO-Pattern/blob/master/docs/Test-Contract.md)
 
 ## What?
