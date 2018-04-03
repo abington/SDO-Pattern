@@ -2,7 +2,6 @@
 
 ## Quality Assurance
 
-![PHP 5.5](https://img.shields.io/badge/PHP-5.5-blue.svg)
 ![PHP 5.6](https://img.shields.io/badge/PHP-5.6-blue.svg)
 ![PHP 7](https://img.shields.io/badge/PHP-7-blue.svg)
 [![Build Status](https://travis-ci.org/chippyash/SDO-Pattern.svg?branch=master)](https://travis-ci.org/chippyash/SDO-Pattern)
@@ -21,13 +20,6 @@ and checkout out the build for yourself.
  
 See the [Test Contract](https://github.com/chippyash/SDO-Pattern/blob/master/docs/Test-Contract.md)
 
-### End of life notice
-
-In March 2018, developer support will be withdrawn from this library for PHP <5.6. Older
-versions of PHP are now in such little use that the added effort of maintaining 
-compatibility is not effort effective.  See [PHP Version Stats](https://seld.be/notes/php-versions-stats-2017-1-edition)
- for the numbers.
- 
 ## What?
 
 This library supplies the Service Data Object (SDO) pattern.  SDOs have a [long history](http://en.wikipedia.org/wiki/Service_Data_Objects) and provide a way to abstract
@@ -223,7 +215,7 @@ Install [Composer](https://getcomposer.org/)
 add
 
 <pre>
-    "chippyash/sdo-pattern": ">=2.0.0"
+    "chippyash/sdo-pattern": ">=3,<4"
 </pre>
 
 to your composer.json "requires" section
@@ -267,3 +259,5 @@ V2.0.2 Add link to packages
 V2.0.3 verify PHP7 compatibility
 
 V2.0.4 update build scripting
+
+V3.0.0 BC Break. Withdraw support for PHP <5.6
